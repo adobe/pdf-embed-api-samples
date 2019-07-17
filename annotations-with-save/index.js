@@ -44,6 +44,37 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
             fileName: "Bodea Brochure.pdf"
         }
     }, {
-        showAnnotationTools: false
+        showAnnotationTools: true
     });
+
+    /* Define Save API Handler */
+    var saveApiHandler = function(metaData, content, options) {
+        console.log(metaData, content, options);
+        return new Promise(function(resolve, reject) {
+            /* Dummy implementation of Save API, replace with your business logic */
+            setTimeout(function() {
+                var response = {
+                    code: AdobeDC.View.Enum.ApiResponseCode.SUCCESS,
+                    data: {
+                        metadata: Object.assign(metaData, {fileName: config.fileName})
+                    },
+                };
+                resolve(response)
+            }, 2000);
+        });
+    };
+
+    /* control Save API options */
+    const options = {
+        /* control the content of file, incremental false means full file content */
+        incremental: false,
+    };
+
+/*  // Uncomment below regsiter call in case you want to control the file save logic
+    adobeDCView.registerCallback(
+        AdobeDC.View.Enum.CallbackType.SAVE_API,
+        saveApiHandler,
+        options
+    );
+*/
 });

@@ -9,6 +9,15 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe. 
 */
 
+/* Control the viewer customization */
+const viewerConfig = {
+    showAnnotationTools: true,
+    showLeftHandPanel: true,
+    showFileDownload: true,
+    showPageControls: true,
+    dockPageControls: true,
+};
+
 /* Wait for Adobe Document Cloud View SDK to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function() {
     /* Initialize the AdobeDC View object */
@@ -43,29 +52,5 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    });
-
-    /* Define a function to listen events */
-    var eventListener = function(event) {
-        console.log(event.type, event.data);
-    };
- 
-    /* control what to listen */
-    const options = {
-        /* Listen on specific events. */
-        /* If no options or listenOn is passed then eventListener will receive all events. */
-        listenOn: []
-        /* Or pass event filter
-        listenOn: [
-            AdobeDC.View.Enum.EventType.APP_RENDERING_START,
-            AdobeDC.View.Enum.EventType.APP_RENDERING_DONE
-        ]
-        */
-    };
-
-    adobeDCView.registerCallback(
-        AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
-        eventListener,
-        options
-    );
+    }, viewerConfig);
 });
