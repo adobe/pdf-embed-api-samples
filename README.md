@@ -19,15 +19,11 @@ The following sub-sections describe how to run the samples.
 
 ### PDF Preview
 
-To preview file preview, copy the file under ```getting-started``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK.
-
-### PDF Preview with listening to events 
-
-To preview file preview and listen various events, copy the file under ```events``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK and events will be printed on browser console.
+To preview file preview, copy the file under ```default-view``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK.
 
 ### PDF Preview with Annotation tools
 
-To preview file preview with annotation tools, copy the file under ```annotation-tools``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK with annotation tools enabled.
+To preview file preview with annotation tools, copy the file under ```annotations-with-save``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK with annotation tools enabled.
 
 ## Licensing
 
