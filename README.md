@@ -1,10 +1,10 @@
 # Getting started with the Adobe Document Cloud View SDK
 
-The Adobe Document Cloud View SDK lets you display PDFs in your website and leverage its power to benefit your users.
+The Adobe Document Cloud View SDK lets you display PDF files in your website and leverage its power to benefit your users.
 
 ## Prerequisites
 
-1. Before you can work with the SDK, you must register your application and get Client Id (API Key). For details, see the "Registering Your Application" section of this guide.
+Before you can work with the SDK, you must register your application and get Client Id (API Key). For details, see the "Registering Your Application" section of this guide.
 
 ## Supported Platforms
 
