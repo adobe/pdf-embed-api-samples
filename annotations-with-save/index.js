@@ -13,7 +13,7 @@ written permission of Adobe.
 document.addEventListener("adobe_dc_view_sdk.ready", function() {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
-        /* Pass your regsitered client id */
+        /* Pass your registered client id */
         clientId: "<YOUR_CLIENT_ID>",
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
@@ -21,7 +21,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
 
     /* Invoke the file preview API on Adobe DC View object */
     adobeDCView.previewFile({
-        /* Pass information on how to accesss the file */
+        /* Pass information on how to access the file */
         content: {
             /* Location of file where it is hosted */
             location: {
@@ -29,7 +29,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
                 /*
                 If accessing file from URL requires some addition headers like "Authorization" etc.
                 It can be passed in headers.
-                header: [
+                headers: [
                     {
                         key: "<HEADER_KEY>",
                         value: "<HEADER_VALUE>",
@@ -56,25 +56,17 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
                 var response = {
                     code: AdobeDC.View.Enum.ApiResponseCode.SUCCESS,
                     data: {
-                        metadata: Object.assign(metaData, {fileName: config.fileName})
+                        metaData: Object.assign(metaData, {updatedAt: new Date().getTime()})
                     },
                 };
-                resolve(response)
+                resolve(response);
             }, 2000);
         });
     };
 
-    /* control Save API options */
-    const options = {
-        /* control the content of file, incremental false means full file content */
-        incremental: false,
-    };
-
-/*  // Uncomment below regsiter call in case you want to control the file save logic
     adobeDCView.registerCallback(
         AdobeDC.View.Enum.CallbackType.SAVE_API,
         saveApiHandler,
-        options
+        {}
     );
-*/
 });

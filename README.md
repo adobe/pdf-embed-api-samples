@@ -4,10 +4,12 @@ The Adobe Document Cloud View SDK lets you display PDFs in your website and leve
 
 ## Prerequisites
 
-1. Before you can work with the SDK, you must register your application and get Client ID (API Key). For details, see the "Registering Your Application" section of this guide.
-1. The following software is required:
+1. Before you can work with the SDK, you must register your application and get Client Id (API Key). For details, see the "Registering Your Application" section of this guide.
 
-    - **Supported browsers**: Chrome, Safari, Firefox, Edge, IE11+
+## Supported Platforms
+
+1. Windows - Chrome 77+, Firefox 69+, Edge 42+, IE11+
+2. Mac - Chrome 77+, Firefox 69+, Safari 12+
 
 ## Registering Your Application
 
@@ -19,11 +21,13 @@ The following sub-sections describe how to run the samples.
 
 ### PDF Preview
 
-To preview file preview, copy the file under ```default-view``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK.
+A sample PDF file preview will be rendered using the SDK. To see it in action, copy the files under ```default-view``` folder to your computer, and open index.html in a supported browser.
 
 ### PDF Preview with Annotation tools
 
-To preview file preview with annotation tools, copy the file under ```annotations-with-save``` folder to your computer, and open index.html in supported browser. A sample PDF preview will be rendered using SDK with annotation tools enabled.
+A sample PDF file preview will be rendered using the SDK, along with annotation tools enabled. To see it in action, copy the files under ```annotations-with-save``` folder to your computer, and open index.html in a supported browser.
+
+Note that by default if a user saves the PDF file after adding comments, the file is downloaded locally. This sample shows how to change that behavior, in this case taking no action except adding a small delay.
 
 ## Licensing
 

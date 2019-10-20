@@ -19,7 +19,7 @@ const viewerConfig = {
 document.addEventListener("adobe_dc_view_sdk.ready", function() {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
-        /* Pass your regsitered client id */
+        /* Pass your registered client id */
         clientId: "<YOUR_CLIENT_ID>",
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
@@ -27,7 +27,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
 
     /* Invoke the file preview API on Adobe DC View object */
     adobeDCView.previewFile({
-        /* Pass information on how to accesss the file */
+        /* Pass information on how to access the file */
         content: {
             /* Location of file where it is hosted */
             location: {
@@ -35,7 +35,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
                 /*
                 If accessing file from URL requires some addition headers like "Authorization" etc.
                 It can be passed in headers.
-                header: [
+                headers: [
                     {
                         key: "<HEADER_KEY>",
                         value: "<HEADER_VALUE>",
