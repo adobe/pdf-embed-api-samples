@@ -6,8 +6,22 @@ NOTICE: Adobe permits you to use, modify, and distribute this file in
 accordance with the terms of the Adobe license agreement accompanying
 it. If you have received this file from a source other than Adobe,
 then your use, modification, or distribution of it requires the prior
-written permission of Adobe. 
+written permission of Adobe.
 */
+
+/* Control the viewer customization.
+ * It lists down all supported variables with default values.
+ **/
+const viewerConfig = {
+    showAnnotationTools: true,
+    enableFormFilling: true,
+    showLeftHandPanel: true,
+    showDownloadPDF: true,
+    showPrintPDF: true,
+    showPageControls: true,
+    dockPageControls: true,
+    defaultViewMode: "", /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH" or "". */
+};
 
 /* Wait for Adobe Document Cloud View SDK to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function() {
@@ -27,8 +41,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
             location: {
                 url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
-                If accessing file from URL requires some addition headers like "Authorization" etc.
-                It can be passed in headers.
+                If the file URL requires some additional headers, then it can be passed as follows:-
                 headers: [
                     {
                         key: "<HEADER_KEY>",
@@ -43,30 +56,5 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    }, {
-        showAnnotationTools: true
-    });
-
-    /* Define Save API Handler */
-    var saveApiHandler = function(metaData, content, options) {
-        console.log(metaData, content, options);
-        return new Promise(function(resolve, reject) {
-            /* Dummy implementation of Save API, replace with your business logic */
-            setTimeout(function() {
-                var response = {
-                    code: AdobeDC.View.Enum.ApiResponseCode.SUCCESS,
-                    data: {
-                        metaData: Object.assign(metaData, {updatedAt: new Date().getTime()})
-                    },
-                };
-                resolve(response);
-            }, 2000);
-        });
-    };
-
-    adobeDCView.registerCallback(
-        AdobeDC.View.Enum.CallbackType.SAVE_API,
-        saveApiHandler,
-        {}
-    );
+    }, viewerConfig);
 });

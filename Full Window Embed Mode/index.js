@@ -6,7 +6,7 @@ NOTICE: Adobe permits you to use, modify, and distribute this file in
 accordance with the terms of the Adobe license agreement accompanying
 it. If you have received this file from a source other than Adobe,
 then your use, modification, or distribution of it requires the prior
-written permission of Adobe. 
+written permission of Adobe.
 */
 
 /* Control the default view mode */
@@ -33,8 +33,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
             location: {
                 url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
-                If accessing file from URL requires some addition headers like "Authorization" etc.
-                It can be passed in headers.
+                If the file URL requires some additional headers, then it can be passed as follows:-
                 headers: [
                     {
                         key: "<HEADER_KEY>",
