@@ -16,7 +16,7 @@ const viewerConfig = {
 };
 
 /* Wait for Adobe Document Cloud View SDK to be ready */
-document.addEventListener("adobe_dc_view_sdk.ready", function() {
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */

@@ -10,7 +10,7 @@ written permission of Adobe.
 */
 
 /* Wait for Adobe Document Cloud View SDK to be ready */
-document.addEventListener("adobe_dc_view_sdk.ready", function() {
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
@@ -49,7 +49,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
         /* Type of call back */
         AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
         /* call back function */
-        function(event) {
+        function (event) {
             console.log(event);
         },
         /* options to control the callback execution */

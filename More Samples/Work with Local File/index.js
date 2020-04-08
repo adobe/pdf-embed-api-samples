@@ -42,8 +42,7 @@ function isValidPDF(file) {
     if (file.type === "" && file.name) {
         var fileName = file.name;
         var lastDotIndex = fileName.lastIndexOf(".");
-        if (lastDotIndex === -1 || fileName.substr(lastDotIndex).toUpperCase() !== "PDF") return false;
-        return true;
+        return !(lastDotIndex === -1 || fileName.substr(lastDotIndex).toUpperCase() !== "PDF");
     }
     return false;
 }
@@ -53,12 +52,12 @@ function isValidPDF(file) {
  **/
 function listenForFileUpload() {
     var fileToRead = document.getElementById("file-picker");
-    fileToRead.addEventListener("change", function(event) {
+    fileToRead.addEventListener("change", function (event) {
         var files = fileToRead.files;
         if (files.length > 0 && isValidPDF(files[0])) {
             var fileName = files[0].name;
             var reader = new FileReader();
-            reader.onloadend = function(e) {
+            reader.onloadend = function (e) {
                 var filePromise = Promise.resolve(e.target.result);
                 previewFile(filePromise, fileName);
             };

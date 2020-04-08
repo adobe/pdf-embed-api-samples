@@ -9,8 +9,14 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
+/* Control the viewer customization. */
+var viewerConfig = {
+    showAnnotationTools: true,
+    enableFormFilling: true,
+};
+
 /* Wait for Adobe Document Cloud View SDK to be ready */
-document.addEventListener("adobe_dc_view_sdk.ready", function() {
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
@@ -42,17 +48,14 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    }, {
-        showAnnotationTools: true,
-        enableFormFilling: true
-    });
+    }, viewerConfig);
 
     /* Define Save API Handler */
-    var saveApiHandler = function(metaData, content, options) {
+    var saveApiHandler = function (metaData, content, options) {
         console.log(metaData, content, options);
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             /* Dummy implementation of Save API, replace with your business logic */
-            setTimeout(function() {
+            setTimeout(function () {
                 var response = {
                     code: AdobeDC.View.Enum.ApiResponseCode.SUCCESS,
                     data: {

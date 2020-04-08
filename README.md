@@ -44,6 +44,12 @@ To see it in action, copy the files in the ```More Samples/PDF Annotations``` fo
 
 Note that by default if a user saves the PDF file after adding comments, the file is downloaded locally. This sample shows how to change that behavior, in this case taking no action except adding a small delay.
 
+### PDF Preview with Annotation APIs
+
+PDF Viewer will render PDF file along with annotation tools and APIs enabled.
+These samples show how to use annotation APIs to add, import, export, update and delete annotations programmatically.
+To see it in action, copy ```More Samples/PDF Annotations APIs``` folder to your computer, and try it out in a supported browser.
+
 ### PDF Preview with Events
 
 This sample shows how to start receiving events from PDF Viewer.

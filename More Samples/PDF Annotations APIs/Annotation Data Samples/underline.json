@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/anno.jsonld",
+    "https://comments.acrobat.com/ns/anno.jsonld"
+  ],
+  "type": "Annotation",
+  "id": "34c2bb70-60e2-4405-be33-a3c9865791e0",
+  "bodyValue": "I underlined this text!",
+  "motivation": "commenting",
+  "target": {
+    "source": "6d07d124-ac85-43b3-a867-36930f502ac6",
+    "selector": {
+      "node": {
+        "index": 4
+      },
+      "opacity": 0.1,
+      "subtype": "underline",
+      "boundingBox": [
+        72.31358062389286,
+        306.4141321404036,
+        256.4968885377396,
+        315.68510401526163
+      ],
+      "quadPoints": [
+        72.31358062389286,
+        315.68510401526163,
+        256.4968885377396,
+        315.68510401526163,
+        72.31358062389286,
+        306.4141321404036,
+        256.4968885377396,
+        306.4141321404036
+      ],
+      "strokeColor": "#008b02",
+      "strokeWidth": 3,
+      "type": "AdobeAnnoSelector"
+    }
+  },
+  "creator": {
+    "type": "Person",
+    "name": "John Smith"
+  },
+  "created": "2020-02-21T14:45:37Z",
+  "modified": "2020-02-21T07:54:10Z"
+}
