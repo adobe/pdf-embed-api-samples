@@ -1,0 +1,7 @@
+<div id='pdf-div' class='pdf-view'>
+    <div style='margin: 50px'>
+        <label for='file-picker' class='file-picker'>Choose PDF File</label>
+        <!-- Listen for file upload -->
+        <input type='file' (change)='onFileUpload($event.target.files)' id='file-picker' name='file-picker' accept='application/pdf' class='file-input'/>
+    </div>
+</div>

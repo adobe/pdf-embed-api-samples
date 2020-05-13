@@ -1,0 +1,20 @@
+.file-input {
+    display: none;
+}
+
+.file-picker {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px #404040;
+    cursor: pointer;
+    color: #ededed;
+    display: inline-block;
+    background-color: #404040;
+    box-shadow: 12px 5px 30px -12px rgba(0, 0, 0, 0.58);
+}
+
+.file-picker:hover {
+    color: white;
+    background-color: #252525;
+}

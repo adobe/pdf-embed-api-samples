@@ -1,0 +1,10 @@
+<div class='annotations-container'>
+    <h3>Annotations</h3>
+    <ul id='annotations'>
+        <list-item-component *ngFor='let listItem of annotationListItems'
+            [annotation]='listItem'
+            [selectedAnnotationId]='selectedAnnotationId'
+            [annotationManager]='annotationManager'>
+        </list-item-component>
+    </ul>
+</div>

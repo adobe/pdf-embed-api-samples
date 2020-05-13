@@ -68,7 +68,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
             function addCommentText(annotation) {
                 var type = annotation.target.selector.subtype;
-                var comment = prompt("Enter the text associated with " + type, "Added a " + type);
+                var comment = prompt("Enter the text associated with " + type, "Added a " + type) || "Added a " + type;
                 annotation.bodyValue = comment;
                 annotationManager.updateAnnotation(annotation)
                     .then(function () {

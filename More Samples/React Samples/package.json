@@ -1,0 +1,27 @@
+{
+  "name": "adobe-dc-view-sdk-react-sample",
+  "version": "1.0.0",
+  "private": false,
+  "license": "See license in license.md",
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Edge versions",
+      "last 2 Safari versions",
+      "Explorer >= 11"
+    ]
+  }
+}
