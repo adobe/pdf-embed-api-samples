@@ -15,6 +15,7 @@ import FullWindow from "./samples/Embed Modes/FullWindow";
 import PDFAnnotationTools from "./samples/PDFAnnotationTools";
 import SizedContainer from "./samples/Embed Modes/SizedContainer";
 import InLine from "./samples/Embed Modes/InLine";
+import Lightbox from "./samples/Embed Modes/Lightbox";
 import ViewerCustomization from "./samples/ViewerCustomization";
 import CaptureViewSDKEvents from "./samples/CaptureViewSDKEvents";
 import LocalPDFFilePreview from "./samples/LocalPDFFilePreview";
@@ -32,6 +33,7 @@ export default class App extends Component {
                     <Route exact path={["/", "/fullWindow"]} component={ FullWindow }/>
                     <Route path="/sizedContainer" component={ SizedContainer }/>
                     <Route path="/inLine" component={ InLine }/>
+                    <Route path="/lightbox" component={ Lightbox }/>
                     <Route path="/pdfAnnotationTools" component={ PDFAnnotationTools }/>
                     <Route path="/viewerCustomization" component={ ViewerCustomization }/>
                     <Route path="/captureViewSDKEvents" component={ CaptureViewSDKEvents }/>

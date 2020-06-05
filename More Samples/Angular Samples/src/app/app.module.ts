@@ -17,6 +17,7 @@ import { AppComponent } from './app.component';
 import { FullWindowComponent } from './samples/embed-modes/full-window/full-window.component';
 import { SizedContainerComponent } from './samples/embed-modes/sized-container/sized-container.component';
 import { InLineComponent } from './samples/embed-modes/in-line/in-line.component';
+import { LightboxComponent } from './samples/embed-modes/lightbox/lightbox.component';
 import { PDFAnnotationToolsComponent } from './samples/pdf-annotation-tools/pdf-annotation-tools.component';
 import { ViewerCustomizationComponent } from './samples/viewer-customization/viewer-customization.component';
 import { CaptureViewSDKEventsComponent } from './samples/capture-view-sdk-events/capture-view-sdk-events.component';
@@ -34,6 +35,7 @@ import { ListItemComponent } from './samples/pdf-annotation-apis/ui-configuratio
         FullWindowComponent,
         SizedContainerComponent,
         InLineComponent,
+        LightboxComponent,
         PDFAnnotationToolsComponent,
         ViewerCustomizationComponent,
         CaptureViewSDKEventsComponent,

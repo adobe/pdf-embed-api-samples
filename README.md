@@ -32,6 +32,11 @@ To see it in action, copy the files in the ```Sized Container Embed Mode``` fold
 PDF Viewer is embedded in line within the context of the app / web page.
 To see it in action, copy the files in the ```In-Line Embed Mode``` folder to your computer, and open index.html in a supported browser.
 
+### Lightbox Embed Mode
+
+PDF Viewer is displayed on top of web page and fills the entire browser window to provide a focused view. Best suited for content websites, content portals and email.
+To see it in action, copy the files in the ```Lightbox Embed Mode``` folder to your computer, and open index.html in a supported browser.
+
 ### Local PDF file Preview
 
 This sample demonstrates how to render a local PDF file using the SDK. It will ask you to pick a PDF file from your computer to start the PDF file rendering using the SDK.

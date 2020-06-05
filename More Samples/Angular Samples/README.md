@@ -18,6 +18,7 @@ For detailed description about each of the samples, see [README](../../README.md
 |Full Window Embed Mode  | ```http://localhost:4200/fullWindow``` |
 |Sized Container Embed Mode  | ```http://localhost:4200/sizedContainer``` |
 |In-Line Embed Mode  | ```http://localhost:4200/inLine``` |
+|Lightbox Embed Mode  | ```http://localhost:4200/lightbox``` |
 |PDF Preview with Annotation Tools  | ```http://localhost:4200/pdfAnnotationTools``` |
 |Viewer Customization  | ```http://localhost:4200/viewerCustomization``` |
 |Local PDF File Preview | ```http://localhost:4200/localPDFFilePreview``` |

@@ -14,6 +14,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullWindowComponent } from './samples/embed-modes/full-window/full-window.component';
 import { SizedContainerComponent } from './samples/embed-modes/sized-container/sized-container.component';
 import { InLineComponent } from './samples/embed-modes/in-line/in-line.component';
+import { LightboxComponent } from './samples/embed-modes/lightbox/lightbox.component';
 import { PDFAnnotationToolsComponent } from './samples/pdf-annotation-tools/pdf-annotation-tools.component';
 import { ViewerCustomizationComponent } from './samples/viewer-customization/viewer-customization.component';
 import { CaptureViewSDKEventsComponent } from './samples/capture-view-sdk-events/capture-view-sdk-events.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
     { path: 'fullWindow', component: FullWindowComponent },
     { path: 'sizedContainer', component: SizedContainerComponent },
     { path: 'inLine', component: InLineComponent },
+    { path: 'lightbox', component: LightboxComponent },
     { path: 'pdfAnnotationTools', component: PDFAnnotationToolsComponent },
     { path: 'viewerCustomization', component: ViewerCustomizationComponent },
     { path: 'captureViewSDKEvents', component: CaptureViewSDKEventsComponent },

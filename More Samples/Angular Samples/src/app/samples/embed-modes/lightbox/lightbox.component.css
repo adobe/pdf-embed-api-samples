@@ -9,23 +9,26 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-.file-input {
-    display: none;
+.container {
+    background-color: #fdfdf9;
+    height: 100vh;
 }
 
-.file-picker {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-    padding: 10px;
-    border-radius: 5px;
+.lb-view-file-btn {
+    background-color: #1473e6;
     border: 1px #404040;
-    cursor: pointer;
+    border-radius: 5px;
     color: #ededed;
-    display: inline-block;
-    background-color: #404040;
-    box-shadow: 12px 5px 30px -12px rgba(0, 0, 0, 0.58);
+    cursor: pointer;
+    font-family: "Arial";
+    font-size: 15px;
+    margin: 100px 0 0 80px;
+    padding: 10px;
+    width: 120px;
 }
 
-.file-picker:hover {
+.lb-view-file-btn:hover {
+    background-color: #0969df;
     color: white;
-    background-color: #252525;
 }
+
