@@ -1,6 +1,6 @@
 # React Sample
 
-This is a React sample application, demonstrating how to use Adobe Document Services PDF embed API with React. To try it out, clone this folder on your computer and run the following commands:
+This is a React sample application, demonstrating how to use Adobe Document Services PDF Embed API with React. To try it out, clone this folder on your computer and run the following commands:
 
 ```
     > npm install
