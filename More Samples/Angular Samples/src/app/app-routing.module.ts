@@ -32,7 +32,7 @@ const routes: Routes = [
     { path: 'lightbox', component: LightboxComponent },
     { path: 'pdfAnnotationTools', component: PDFAnnotationToolsComponent },
     { path: 'viewerCustomization', component: ViewerCustomizationComponent },
-    { path: 'captureViewSDKEvents', component: CaptureViewSDKEventsComponent },
+    { path: 'captureEvents', component: CaptureViewSDKEventsComponent },
     { path: 'localPDFFilePreview', component: LocalPDFFilePreviewComponent },
     { path: 'annotationAPIs', component: CRUDAPIsComponent },
     { path: 'annotationAPIs/captureEvents', component: CaptureEventsComponent },

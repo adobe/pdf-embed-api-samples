@@ -1,6 +1,6 @@
 # PDF Preview with Events Sample
 
-This sample shows how to start receiving events from PDF Viewer.
+This sample shows how to start receiving events from PDF viewer.
 To see it in action, copy the files in the folder to your computer, and open index.html in a supported browser.
 
 ## Documentation

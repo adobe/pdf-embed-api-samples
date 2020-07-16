@@ -1,6 +1,6 @@
-# Adobe Document Cloud View SDK Angular Sample
+# Angular Sample
 
-This is an Angular sample application, demonstrating how to use View SDK with Angular. To try it out, clone this folder on your computer and run the following commands:
+This is an Angular sample application, demonstrating how to use Adobe Document Services PDF embed API with Angular. To try it out, clone this folder on your computer and run the following commands:
 
 ```
     > npm install
@@ -9,9 +9,9 @@ This is an Angular sample application, demonstrating how to use View SDK with An
 
 The app will be available at ```http://localhost:4200```
 
-Below are the endpoints exposed from the application to show different use cases of View SDK.
+Below are the endpoints exposed from the application to show different use cases of PDF embed API.
 
-For detailed description about each of the samples, see [README](../../README.md#running-the-samples).
+For detailed description about each of the samples, see [README](../../README.md).
 
 | Sample | Endpoint |
 |---|---|
@@ -22,12 +22,12 @@ For detailed description about each of the samples, see [README](../../README.md
 |PDF Preview with Annotation Tools  | ```http://localhost:4200/pdfAnnotationTools``` |
 |Viewer Customization  | ```http://localhost:4200/viewerCustomization``` |
 |Local PDF File Preview | ```http://localhost:4200/localPDFFilePreview``` |
-|PDF Preview with Events  | ```http://localhost:4200/captureViewSDKEvents``` |
+|PDF Preview with Events  | ```http://localhost:4200/captureEvents``` |
 
 
 Following endpoints showcase the different PDF Annotation APIs and their use cases.
 
-For detailed description about the annotation APIs samples, see [Annotation APIs README](../PDF%20Annotations%20APIs/README.md#pdf-annotation-api-samples).
+For detailed description about the annotation APIs samples, see [Annotation APIs README](../PDF%20Annotations%20APIs/README.md).
 
 | Annotation API Sample | Endpoint |
 |---|---|

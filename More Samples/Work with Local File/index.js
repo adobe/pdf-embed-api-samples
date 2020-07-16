@@ -9,7 +9,7 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-/* Helper function to render the file using SDK. */
+/* Helper function to render the file using PDF Embed API. */
 function previewFile(filePromise, fileName) {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({

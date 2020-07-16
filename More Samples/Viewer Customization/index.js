@@ -23,7 +23,7 @@ var viewerConfig = {
     defaultViewMode: "", /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH" or "". */
 };
 
-/* Wait for Adobe Document Cloud View SDK to be ready */
+/* Wait for Adobe Document Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({

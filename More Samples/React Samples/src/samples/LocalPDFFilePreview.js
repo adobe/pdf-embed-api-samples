@@ -34,7 +34,7 @@ class LocalPDFFilePreview extends Component {
 
     /* Helper function to be executed on file upload
     * for creating Promise which resolve to ArrayBuffer of file data.
-    **/    
+    **/
     onFileUpload = event => {
         event.persist();
         this.viewSDKClient.ready().then(() => {
@@ -44,7 +44,7 @@ class LocalPDFFilePreview extends Component {
                 const reader = new FileReader();
                 reader.onloadend = e => {
                     const filePromise = Promise.resolve(e.target.result);
-                    /* Helper function to render the file using SDK. */
+                    /* Helper function to render the file using PDF Embed API. */
                     this.viewSDKClient.previewFileUsingFilePromise("pdf-div", filePromise, fileName);
                 };
                 reader.readAsArrayBuffer(files[0]);

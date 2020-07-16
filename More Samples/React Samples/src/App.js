@@ -36,7 +36,7 @@ export default class App extends Component {
                     <Route path="/lightbox" component={ Lightbox }/>
                     <Route path="/pdfAnnotationTools" component={ PDFAnnotationTools }/>
                     <Route path="/viewerCustomization" component={ ViewerCustomization }/>
-                    <Route path="/captureViewSDKEvents" component={ CaptureViewSDKEvents }/>
+                    <Route path="/captureEvents" component={ CaptureViewSDKEvents }/>
                     <Route path="/localPDFFilePreview" component={ LocalPDFFilePreview }/>
                     <Route exact path="/annotationAPIs" component={ CRUDAPIs }/>
                     <Route path="/annotationAPIs/captureEvents" component={ CaptureEvents }/>

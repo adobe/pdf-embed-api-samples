@@ -1,6 +1,6 @@
 # In-Line Embed Mode Sample
 
-PDF Viewer is embedded in line within the context of the app / web page.
+PDF viewer is embedded in line within the context of the app / web page.
 To see it in action, copy the files in the folder to your computer, and open index.html in a supported browser.
 
 ## Documentation

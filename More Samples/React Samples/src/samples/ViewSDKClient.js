@@ -15,7 +15,7 @@ class ViewSDKClient {
             if (window.AdobeDC) {
                 resolve();
             } else {
-                /* Wait for Adobe Document Cloud View SDK to be ready */
+                /* Wait for Adobe Document Services PDF Embed API to be ready */
                 document.addEventListener("adobe_dc_view_sdk.ready", () => {
                     resolve();
                 });
