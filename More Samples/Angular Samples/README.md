@@ -1,6 +1,6 @@
 # Angular Sample
 
-This is an Angular sample application, demonstrating how to use Adobe Document Services PDF embed API with Angular. To try it out, clone this folder on your computer and run the following commands:
+This is an Angular sample application, demonstrating how to use Adobe Document Services PDF Embed API with Angular. To try it out, clone this folder on your computer and run the following commands:
 
 ```
     > npm install
