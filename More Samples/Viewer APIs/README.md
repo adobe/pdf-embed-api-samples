@@ -1,8 +1,7 @@
 # Viewer APIs
 
-PDF Embed API provides viewer APIs for cutomizing the user interface and user interactions with the PDF.
-These samples show these APIs can be used to perform UI customizations programmatically at run-time.
-To see it in action, copy the files in the folder to your computer, and open index.html in a supported browser.
+PDF Embed API provides viewer APIs for customizing the user interface and user interactions with the PDF.
+These samples show how these APIs can be used to perform UI customizations programmatically at run-time.
 
 ### Search APIs
 

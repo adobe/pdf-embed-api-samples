@@ -50,7 +50,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             /* API to get the minimum and maximum zoom level limit of the PDF */
             apis.getZoomAPIs().getZoomLimits()
                 .then(function (result) {
-                    console.log("Minimum and maximum zoom limit of the PDF", result)
+                    console.log("Minimum and maximum zoom limit of the PDF: ", result)
                 })
                 .catch(function (error) {
                     console.log(error)
@@ -60,7 +60,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             setTimeout(function() {
                 apis.getZoomAPIs().zoomIn()
                 .then(function (result) {
-                    console.log("Resultant zoom level after zoom in", result)
+                    console.log("Resultant zoom level after zoom in operation: ", result)
                 })
                 .catch(function (error) {
                     console.log(error)
@@ -71,7 +71,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             setTimeout(function() {
                 apis.getZoomAPIs().zoomOut()
                     .then(function (result) {
-                        console.log("Resultant zoom level after zoom out", result)
+                        console.log("Resultant zoom level after zoom out operation: ", result)
                     })
                     .catch(function (error) {
                         console.log(error)
@@ -82,7 +82,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             setTimeout(function() {
                 apis.getZoomAPIs().setZoomLevel(1.5)
                     .then(function (result) {
-                        console.log("Resultant zoom level after zoom-out", result)
+                        console.log("Resultant zoom level after setting zoom level: ", result)
                     })
                     .catch(function (error) {
                         console.log(error)
