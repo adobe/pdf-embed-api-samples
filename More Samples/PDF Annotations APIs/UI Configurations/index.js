@@ -107,6 +107,9 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
                     if (event.type === "ANNOTATION_UNSELECTED" && document.getElementById(event.data.id)) {
                         document.getElementById(event.data.id).style.border = "2px solid #eee";
                     }
+                    if (event.type === "ANNOTATION_UPDATED" && document.getElementById(event.data.id)) {
+                        document.getElementById(event.data.id).getElementsByTagName("label")[0].innerText = event.data.bodyValue;
+                    }
                     console.log(event);
                 }
             );

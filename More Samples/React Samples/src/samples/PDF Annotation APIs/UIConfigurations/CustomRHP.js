@@ -147,6 +147,9 @@ class CustomRHP extends Component {
         if (event.type === "ANNOTATION_UNSELECTED") {
             this.toggleSelectedAnnotation();
         }
+        if (event.type === "ANNOTATION_UPDATED") {
+            this.onTextAnnotationUpdated(event.data);
+        }
         console.log(event);
     }
 
@@ -168,6 +171,15 @@ class CustomRHP extends Component {
     toggleSelectedAnnotation = id => {
         this.setState({
             selectedAnnotationId: id
+        });
+    }
+
+    /* This will update the text in the annotation list item when text annotation is updated from UI */
+    onTextAnnotationUpdated = annotation => {
+        var index = this.state.annotationListItems.findIndex(item => item.id === annotation.id);
+        this.state.annotationListItems[index].bodyValue = annotation.bodyValue;
+        this.setState({
+            annotationListItems: this.state.annotationListItems
         });
     }
 

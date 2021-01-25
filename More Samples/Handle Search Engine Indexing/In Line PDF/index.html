@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adobe Document Services PDF Embed API Sample - Handle Search Engine Indexing</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="Click on any PDF link to open the PDF in line within the context of the same webpage.">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<!-- Customize page layout style according to your need and PDF file for best viewing experience -->
+<body style="margin: 5px; background-color: #fdfdf9;">
+	<h2>Click on any link to view the PDF file</h2>
+	<ul>
+  		<li>
+  			<a 
+				href="https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf" 
+				onclick='return onClick("Bodea Brochure.pdf", "IN_LINE")' 
+				class="view-pdf"
+			>
+				Bodea Brochure.pdf
+			</a>
+		</li>
+	    <li>
+		  	<a 
+				href="https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Survey.pdf" 
+				onclick='return onClick("Bodea Survey.pdf", "IN_LINE")' 
+				class="view-pdf"
+			>
+				Bodea Survey.pdf
+			</a>
+		</li>
+	    <li>
+		  	<a 
+				href="https://documentcloud.adobe.com/view-sdk-demo/PDFs/Overview.pdf" 
+				onclick='return onClick("Overview.pdf", "IN_LINE")' 
+				class="view-pdf"
+			>
+				Overview.pdf
+			</a>
+		</li>
+	</ul>
+	<div id="adobe-dc-view"></div>
+	<script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+</body>
+</html>

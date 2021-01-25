@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/anno.jsonld",
+    "https://comments.acrobat.com/ns/anno.jsonld"
+  ],
+  "type": "Annotation",
+  "id": "02dcf931-d1cb-49c1-a8bc-d047892a06bc",
+  "bodyValue": "I added a text annotation!",
+  "motivation": "commenting",
+  "stylesheet": {
+    "type": "CssStylesheet",
+    "value": "body-value-css { font: 14px Helvetica; color: #0000FF; }"
+  },
+  "target": {
+    "source": "6d07d124-ac85-43b3-a867-36930f502ac6",
+    "selector": {
+      "node": {
+        "index": 1
+      },
+      "subtype": "freetext",
+      "boundingBox": [
+        306.41829735235586,
+        339.01199687491595,
+        475.729044456285,
+        357.0653042030006
+      ],
+      "styleClass": "body-value-css",
+      "type": "AdobeAnnoSelector"
+    }
+  },
+  "creator": {
+    "type": "Person",
+    "name": "John Smith"
+  },
+  "created": "2021-01-20T14:45:37Z",
+  "modified": "2021-01-20T14:45:37Z"
+}

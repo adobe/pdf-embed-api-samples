@@ -35,6 +35,9 @@ export class ListItemComponent implements AfterViewInit {
         } else {
             /* toggle editMode */
             this.inEditMode = true;
+            if(this.editInputValue !== this.annotation.bodyValue) {
+                this.editInputValue = this.annotation.bodyValue;
+            }
         }
     };
 

@@ -38,6 +38,9 @@ export class CustomRHPComponent implements AfterViewInit {
         if (event.type === 'ANNOTATION_UNSELECTED') {
             this.toggleSelectedAnnotation(undefined);
         }
+        if (event.type === "ANNOTATION_UPDATED") {
+            this.onTextAnnotationUpdated(event.data);
+        }
         console.log(event);
     }
 
@@ -54,6 +57,12 @@ export class CustomRHPComponent implements AfterViewInit {
     /* This will set/unset selected annotation id */
     toggleSelectedAnnotation = (id: string) => {
         this.selectedAnnotationId = id;
+    }
+
+    /* This will update the text in the annotation list item when text annotation is updated from UI */
+    onTextAnnotationUpdated = (annotation: any) => {
+        var index = this.annotationListItems.findIndex(item => item.id === annotation.id);
+        this.annotationListItems[index].bodyValue = annotation.bodyValue;
     }
 
     addCommentText = (annotation: any) => {

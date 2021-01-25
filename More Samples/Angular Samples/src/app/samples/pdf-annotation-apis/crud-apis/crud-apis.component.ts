@@ -54,7 +54,7 @@ export class CRUDAPIsComponent implements AfterViewInit {
                     /* API to delete annotations based on annotation ID filter */
                     let filter: any;
                     filter = {
-                        annotationIds: ['17bf889a-f170-4c13-a655-4b1e5de0bf41', '3adeae16-a868-4653-960e-613c048dddc5']
+                        annotationIds: ["3adeae16-a868-4653-960e-613c048dddc5", "079d66a4-5ec2-4703-ae9d-30ccbb1aa84c"]
                     };
                     annotationManager.deleteAnnotations(filter)
                         .then(() => {
@@ -67,8 +67,8 @@ export class CRUDAPIsComponent implements AfterViewInit {
                     /* API to delete annotations based on page range filter */
                     filter = {
                         pageRange: {
-                            startPage: 2,
-                            endPage: 3
+                            startPage: 4,
+                            endPage: 6
                         }
                     };
                     annotationManager.deleteAnnotations(filter)

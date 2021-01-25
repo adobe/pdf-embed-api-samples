@@ -60,6 +60,17 @@ To see it in action, copy ```More Samples/PDF Annotations APIs``` folder to your
 This sample shows how to start receiving events from PDF viewer.
 To see it in action, copy the files in the ```More Samples/Capture PDF Embed API Events``` folder to your computer, and open index.html in a supported browser.
 
+### Handle Search Engine Indexing
+
+These samples provide different implementations of how to enable indexing of PDF files displayed using PDF Embed API.
+To see it in action, copy ```More Samples/Handle Search Engine Indexing``` folder to your computer, and try it out in a supported browser.
+
+### Viewer APIs
+
+PDF Embed API provides viewer APIs for customizing the user interface and user interactions with the PDF.
+These samples show how to use these APIs to perform UI customizations programmatically at run-time.
+To see it in action, copy the files in the ```More Samples/Viewer APIs``` folder to your computer, and try it out in a supported browser.
+
 ## JavaScript Framework Samples
 
 ### React Samples

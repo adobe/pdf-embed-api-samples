@@ -9,23 +9,22 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-/* Pass the embed mode option here */
+/* Control the default view mode */
 const viewerConfig = {
-    embedMode: "LIGHT_BOX"
+    /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH" or "" */
+    defaultViewMode: "",
 };
 
-/* Wait for Adobe Document Services PDF Embed API to be ready and enable the View PDF button */
+/* Wait for Adobe Document Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
-    document.getElementById("view-pdf-btn").disabled = false;
-});
-
-/* Function to render the file using PDF Embed API. */
-function previewFile()
-{
+    const urlParams = new URLSearchParams(window.location.search);
+    const pdf = urlParams.get('pdf');
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
-        clientId: "<YOUR_CLIENT_ID>"
+        clientId: "<YOUR_CLIENT_ID>",
+        /* Pass the div id in which PDF should be rendered */
+        divId: "adobe-dc-view",
     });
 
     /* Invoke the file preview API on Adobe DC View object */
@@ -34,10 +33,10 @@ function previewFile()
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+                url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/" + pdf,
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
-                header: [
+                headers: [
                     {
                         key: "<HEADER_KEY>",
                         value: "<HEADER_VALUE>",
@@ -49,7 +48,7 @@ function previewFile()
         /* Pass meta data of file */
         metaData: {
             /* file name */
-            fileName: "Bodea Brochure.pdf"
+            fileName: pdf
         }
     }, viewerConfig);
-};
+});

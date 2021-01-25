@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adobe Document Services PDF Embed API Sample - Handle Search Engine Indexing</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="Auto-click on the PDF link after the webpage loads completely and open the PDF in the desired embed mode."> 
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<!-- Customize page layout style according to your need and PDF file for best viewing experience -->
+<body style="margin: 5px; background-color: #fdfdf9;">
+	<h2>Click on any link to view the PDF file</h2>
+	<ul>
+  		<li>
+  			<a 
+				href="https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf" 
+				onclick='return onClick("Bodea Brochure.pdf", "SIZED_CONTAINER")' 
+				class="view-pdf"
+			>
+				Bodea Brochure.pdf
+			</a>
+		</li>
+	    <li>
+		  	<a 
+				href="https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Survey.pdf" 
+				onclick='return onClick("Bodea Survey.pdf", "SIZED_CONTAINER")' 
+				class="view-pdf"
+			>
+				Bodea Survey.pdf
+			</a>
+		</li>
+	    <li>
+		  	<a 
+				href="https://documentcloud.adobe.com/view-sdk-demo/PDFs/Overview.pdf" 
+				onclick='return onClick("Overview.pdf", "SIZED_CONTAINER")' 
+				class="view-pdf"
+			>
+				Overview.pdf
+			</a>
+		</li>
+	</ul>
+	<div id="adobe-dc-view" style="border: 1px solid lightgrey; width: 70vw; height: 50vw; margin: 0 auto;"></div>
+	<script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+</body>
+</html>

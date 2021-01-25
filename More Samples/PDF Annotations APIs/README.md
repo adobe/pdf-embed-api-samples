@@ -27,7 +27,7 @@ To see it in action, open ```UI Configurations/index.html``` in a supported brow
 
 ### Annotation Data Samples
 
-Folder ```Annotation Data Samples``` contains acceptable annotation data for note, reply, highlight, underline, strikeout and shape annotation types in JSON format.
+Folder ```Annotation Data Samples``` contains acceptable annotation data for freetext, note, reply, highlight, underline, strikeout and shape annotation types in JSON format.
 
 ## Documentation
 
