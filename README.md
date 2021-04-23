@@ -71,6 +71,11 @@ PDF Embed API provides viewer APIs for customizing the user interface and user i
 These samples show how to use these APIs to perform UI customizations programmatically at run-time.
 To see it in action, copy the files in the ```More Samples/Viewer APIs``` folder to your computer, and try it out in a supported browser.
 
+### Linearized PDF file Preview
+
+This sample demonstrates how to render a linearized PDF file using the PDF Embed API.
+To see it in action, copy the files in the ```More Samples/Linearization``` folder to your computer, and open index.html in a supported browser.
+
 ## JavaScript Framework Samples
 
 ### React Samples

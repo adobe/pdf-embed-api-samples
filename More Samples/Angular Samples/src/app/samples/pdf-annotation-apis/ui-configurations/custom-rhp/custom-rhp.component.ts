@@ -38,7 +38,7 @@ export class CustomRHPComponent implements AfterViewInit {
         if (event.type === 'ANNOTATION_UNSELECTED') {
             this.toggleSelectedAnnotation(undefined);
         }
-        if (event.type === "ANNOTATION_UPDATED") {
+        if (event.type === "ANNOTATION_UPDATED" && event.data.target.selector.subtype === "freetext") {
             this.onTextAnnotationUpdated(event.data);
         }
         console.log(event);

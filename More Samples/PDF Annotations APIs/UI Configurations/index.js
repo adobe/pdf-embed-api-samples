@@ -17,6 +17,20 @@ var viewerConfig = {
 /* Variable for holding reference of Annotation Manager */
 var annotationManager;
 
+/* Variable for holding annotation tool selected from custom comments pane */
+var selectedAnnotationTool;
+
+/* Initializing with the default annotation options */
+var annotationOptions = {
+    freetext: { defaultColor: "#000000", fontSize: "12px"},
+    note: { defaultColor: "#fccb00"},
+    highlight: { defaultColor: "#fccb00"}, 
+    strikeout: { defaultColor: "#b80000"}, 
+    underline: { defaultColor: "#008b02"},
+    shape: { defaultColor: "#b80000"}, 
+    eraser: {} 
+};
+
 /* Wait for Adobe Document Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
@@ -26,7 +40,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
     });
-
+    
     /* Invoke the file preview API on Adobe DC View object and return the Promise object */
     var previewFilePromise = adobeDCView.previewFile({
         /* Pass information on how to access the file */
@@ -56,11 +70,17 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
     /* Use the annotation manager interface to invoke the commenting APIs*/
     previewFilePromise.then(function (adobeViewer) {
+        
+        /* Enable the annotation tools in the comments pane after PDF is rendered */
+        Object.keys(annotationOptions).forEach(function(annotType) {
+            document.getElementById(annotType).disabled = false;
+        });
+        
         adobeViewer.getAnnotationManager().then(function (annotManager) {
             annotationManager = annotManager;
             /* API to set UI configurations */
             const customFlags = {
-                /* showToolbar: false,   /* Default value is true */
+                showToolbar: false,   /* Default value is true */
                 showCommentsPanel: false,  /* Default value is true */
                 downloadWithAnnotations: true,  /* Default value is false */
                 printWithAnnotations: true,  /* Default value is false */
@@ -109,6 +129,12 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
                     }
                     if (event.type === "ANNOTATION_UPDATED" && document.getElementById(event.data.id)) {
                         document.getElementById(event.data.id).getElementsByTagName("label")[0].innerText = event.data.bodyValue;
+                    }
+                    if (event.type === "ANNOTATION_MODE_STARTED" && document.getElementById(event.data)) {
+                        document.getElementById(event.data).style.opacity = "1.0";
+                    }
+                    if (event.type === "ANNOTATION_MODE_ENDED" && document.getElementById(event.data)) {
+                        document.getElementById(event.data).style.opacity = "0.5";
                     }
                     console.log(event);
                 }
@@ -228,3 +254,53 @@ var deleteAnnotation = function (annotation, parentNode) {
             console.log(error)
         });
 };
+
+/* Select any annotation tool from the right-hand comments pane and start the annotation mode */
+var selectAnnotationTool = function(annotTool) {
+    document.getElementById("annot-color").value = annotationOptions[annotTool].defaultColor;
+    document.getElementById("font-size").value = annotationOptions[annotTool].fontSize;
+    
+    document.getElementById("annot-color").style.display = "none";
+    document.getElementById("font-size").style.display = "none";
+    
+    if (annotTool !== "eraser") {
+        document.getElementById("annot-color").style.display = "inline-block";
+    }
+    if (annotTool === "freetext") {
+        document.getElementById("font-size").style.display = "inline-block";
+    }
+
+    if (selectedAnnotationTool !== annotTool) {
+        selectedAnnotationTool = annotTool;
+        startAnnotationMode(annotTool, {});
+    } else {
+        endAnnotationMode();
+        selectedAnnotationTool = "";
+        document.getElementById("annot-color").style.display = "none";
+        document.getElementById("font-size").style.display = "none";
+    }
+}
+
+/* Set annotation options (such as, color and font size) and start annotation mode */
+var setAnnotationOptions = function() {
+    annotationOptions[selectedAnnotationTool].defaultColor = document.getElementById("annot-color").value;
+
+    if (document.getElementById("font-size").value) {
+        annotationOptions[selectedAnnotationTool].fontSize = document.getElementById("font-size").value;
+    }
+    startAnnotationMode(selectedAnnotationTool, annotationOptions[selectedAnnotationTool]);
+}
+
+/* Start the annotation mode */
+var startAnnotationMode = function(mode, options) {
+    annotationManager.startAnnotationMode(mode, options)
+        .then(function () {})
+        .catch(function(error) { console.log(error)});
+}
+
+/* End the annotation mode */
+var endAnnotationMode = function(mode, options) {
+    annotationManager.endAnnotationMode()
+        .then(function () {})
+        .catch(function(error) { console.log(error)});
+}

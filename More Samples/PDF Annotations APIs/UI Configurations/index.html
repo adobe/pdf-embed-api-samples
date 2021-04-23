@@ -10,11 +10,37 @@
 </head>
 <body>
 	<div id="adobe-dc-view" class="pdf-view"></div>
-    <div class="container">
-        <h3>Annotations</h3>
+	<div class="container">
+        <h3>
+			<button id="freetext" class="annotation-icon" title="Add text comment" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_add_text.svg"></button>
+			<button id="note" class="annotation-icon" title="Add sticky note" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_stickynote.svg"></button>
+			<button id="highlight" class="annotation-icon" title="Highlight text" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_highlight.svg"></button>
+			<button id="strikeout" class="annotation-icon" title="Strikethrough text" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_strikethrough.svg"></button>
+			<button id="underline" class="annotation-icon" title="Underline text" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_underline.svg"></button>
+			<button id="shape" class="annotation-icon" title="Add drawing" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_drawing.svg"></button>
+			<button id="eraser" class="annotation-icon" title="Erase drawing" onclick="selectAnnotationTool(id)" disabled><img src="images/tool_eraser.svg"></button>
+			
+			<div>
+				<input type="color" id="annot-color" title="Choose colour" onchange="setAnnotationOptions()" style="margin-top: 10px; margin-right: 10px; display: none;">
+				<select name="font-size" id="font-size" title="Font size" onchange="setAnnotationOptions()" style="margin-top: 10px; margin-right: 10px; display: none;">
+					<option value="" selected disabled>Font size</option> 
+					<option value="6px">6 px</option>
+					<option value="8px">8 px</option>
+					<option value="10px">10 px</option>
+					<option value="12px">12 px</option>
+					<option value="14px">14 px</option>
+					<option value="18px">18 px</option>
+					<option value="20px">20 px</option>
+					<option value="22px">22 px</option>
+					<option value="24px">24 px</option>
+				</select>
+			</div>
+
+		</h3>
         <ul id="annots">
         </ul>
-    </div>
+	</div>
+
 	<script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 </body>
 </html>

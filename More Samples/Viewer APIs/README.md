@@ -3,15 +3,22 @@
 PDF Embed API provides viewer APIs for customizing the user interface and user interactions with the PDF.
 These samples show how these APIs can be used to perform UI customizations programmatically at run-time.
 
-### Search APIs
+### Attachment APIs
 
-This sample shows how to search for a term in a PDF and traverse through the search results programmatically.
-To see it in action, open ```Search APIs/index.html``` in a supported browser.
+This sample shows how to access the file attachments available in the PDF.
+To see it in action, open ```Attachment APIs/index.html``` in a supported browser.
 
-### Zoom APIs
+### Bookmark APIs
 
-This sample shows how to perform zoom operations on a PDF programmatically.
-To see it in action, open ```Zoom APIs/index.html``` in a supported browser.
+This sample shows how to fetch and open bookmarks in the PDF programmatically.
+To see it in action, open ```Bookmark APIs/index.html``` in a supported browser.
+
+### Search and Zoom APIs
+
+This sample shows how to perform search and zoom operations on the PDF programmatically using the Search and Zoom Viewer APIs.
+Search APIs will search for a term in a PDF and traverse through the search results.
+Zoom APIs will perform zoom operations on the PDF.
+To see it in action, open ```Search and Zoom APIs/index.html``` in a supported browser.
 
 ## Documentation
 

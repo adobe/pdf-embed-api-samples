@@ -24,6 +24,12 @@ body {
     width: 400px;
 }
 
+.annotation-icon {
+    opacity: 0.5;
+    width: 25px;
+    margin: 0 10px;
+}
+
 ul {
     margin: 0 5px;
     padding: 0;
