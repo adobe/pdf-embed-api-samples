@@ -27,7 +27,7 @@ var annotationOptions = {
     highlight: { defaultColor: "#fccb00"}, 
     strikeout: { defaultColor: "#b80000"}, 
     underline: { defaultColor: "#008b02"},
-    shape: { defaultColor: "#b80000"}, 
+    shape: { defaultColor: "#b80000", strokeWidth: 3}, 
     eraser: {} 
 };
 
@@ -259,15 +259,20 @@ var deleteAnnotation = function (annotation, parentNode) {
 var selectAnnotationTool = function(annotTool) {
     document.getElementById("annot-color").value = annotationOptions[annotTool].defaultColor;
     document.getElementById("font-size").value = annotationOptions[annotTool].fontSize;
+    document.getElementById("stroke-width").value = annotationOptions[annotTool].strokeWidth;
     
     document.getElementById("annot-color").style.display = "none";
     document.getElementById("font-size").style.display = "none";
+    document.getElementById("stroke-width").style.display = "none";
     
     if (annotTool !== "eraser") {
         document.getElementById("annot-color").style.display = "inline-block";
     }
     if (annotTool === "freetext") {
         document.getElementById("font-size").style.display = "inline-block";
+    }
+    if (annotTool === "shape") {
+        document.getElementById("stroke-width").style.display = "inline-block";
     }
 
     if (selectedAnnotationTool !== annotTool) {
@@ -278,6 +283,7 @@ var selectAnnotationTool = function(annotTool) {
         selectedAnnotationTool = "";
         document.getElementById("annot-color").style.display = "none";
         document.getElementById("font-size").style.display = "none";
+        document.getElementById("stroke-width").style.display = "none";
     }
 }
 
@@ -288,6 +294,11 @@ var setAnnotationOptions = function() {
     if (document.getElementById("font-size").value) {
         annotationOptions[selectedAnnotationTool].fontSize = document.getElementById("font-size").value;
     }
+
+    if (document.getElementById("stroke-width").value) {
+        annotationOptions[selectedAnnotationTool].strokeWidth = parseInt(document.getElementById("stroke-width").value);
+    }
+
     startAnnotationMode(selectedAnnotationTool, annotationOptions[selectedAnnotationTool]);
 }
 

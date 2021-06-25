@@ -76,6 +76,11 @@ To see it in action, copy the files in the ```More Samples/Viewer APIs``` folder
 This sample demonstrates how to render a linearized PDF file using the PDF Embed API.
 To see it in action, copy the files in the ```More Samples/Linearization``` folder to your computer, and open index.html in a supported browser.
 
+### Save User Preferences
+
+This sample demonstrates how certain user preferences (such as updated annotation colour, and coach mark after selecting any annotation tool) can be saved and remembered in the browser.
+To see it in action, copy the files in the ```More Samples/Save User Preferences``` folder to your computer, and open index.html in a supported browser.
+
 ## JavaScript Framework Samples
 
 ### React Samples
