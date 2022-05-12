@@ -8,8 +8,8 @@ Before you can work with the PDF Embed API, you must register your application a
 
 ## Supported Platforms
 
-1. Windows - Chrome, Firefox, Edge, IE11+
-2. Mac - Chrome, Firefox, Safari
+1. Windows - Chrome, Firefox, Edge Chromium
+2. Mac - Chrome, Firefox, Safari, Edge Chromium
 3. Android - Chrome
 4. iOS - Chrome, Safari
 
@@ -80,6 +80,13 @@ To see it in action, copy the files in the ```More Samples/Linearization``` fold
 
 This sample demonstrates how certain user preferences (such as updated annotation colour, and coach mark after selecting any annotation tool) can be saved and remembered in the browser.
 To see it in action, copy the files in the ```More Samples/Save User Preferences``` folder to your computer, and open index.html in a supported browser.
+
+### Analytics
+
+If a website is already integrated with analytics tools, such as, Adobe Analytics or Google Analytics, then PDF analytics can be collected in these tools. These samples demonstrate how website developers can collect PDF analytics generated from PDF Embed API in Adobe Analytics and Google Analytics.
+To see it in action, copy the files in the ```More Samples/Analytics``` folder to your computer, and try it out in a supported browser.
+
+To know more about the setup steps, please check the [documentation](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api/howtodata/).
 
 ## JavaScript Framework Samples
 
