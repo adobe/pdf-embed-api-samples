@@ -15,12 +15,10 @@ written permission of Adobe.
 var viewerConfig = {
     showAnnotationTools: true,
     enableFormFilling: true,
-    showLeftHandPanel: true,
     showDownloadPDF: true,
     showPrintPDF: true,
-    showPageControls: true,
-    dockPageControls: true,
-    defaultViewMode: "", /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH" or "". */
+    showZoomControl: true,
+    defaultViewMode: "", /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH", "TWO_COLUMN", "TWO_COLUMN_FIT_PAGE" or "". */
 };
 
 /* Wait for Adobe Document Services PDF Embed API to be ready */

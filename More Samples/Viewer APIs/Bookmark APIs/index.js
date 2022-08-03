@@ -10,8 +10,8 @@ written permission of Adobe.
 */
 
 var viewerConfig = {
-    /* Disable the left-hand panel */
-    showLeftHandPanel: false,  /* Default value is true */
+    /* Disable bookmark in right hand panel */
+    showBookmarks: false,
 };
 
 /* Variable for holding reference of viewer API */
@@ -119,7 +119,7 @@ var createBookmarkList = function(bookmarkList, bookmarkItem) {
     var subList;
     listItem.id = bookmarkItem.id;
     listItem.innerText = bookmarkItem.title;
-    
+
     bookmarkList.appendChild(listItem);
     bookmarkItem.children.forEach(function(child) {
         subList = document.createElement("ul");

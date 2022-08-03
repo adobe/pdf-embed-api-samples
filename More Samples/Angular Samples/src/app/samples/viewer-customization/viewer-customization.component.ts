@@ -20,14 +20,11 @@ export class ViewerCustomizationComponent implements AfterViewInit {
     * It lists down all supported variables with default values.
     **/
     viewerConfig = {
-        /* If true, tools such as sticky note, highlight, and so on appear in the upper toolbar. */
+        /* If true, tools such as sticky note, highlight, and so on appear in the quick tools menu. */
         showAnnotationTools: true,
 
         /* If true, form filling is enabled and users can edit fields. */
         enableFormFilling: true,
-
-        /* If true, the left-hand pane in file preview displays. The pane allows user to toggle thumbnails on and off. */
-        showLeftHandPanel: true,
 
         /* If true, a download button appears in the overflow menu on the top bar. */
         showDownloadPDF: true,
@@ -35,18 +32,15 @@ export class ViewerCustomizationComponent implements AfterViewInit {
         /* If true, then a print PDF option appears in the overflow menu on the top bar. */
         showPrintPDF: true,
 
-        /* If true, the page control toolbar displays. */
-        showPageControls: true,
+        /* If true, the zoom controls are displayed on the right hand panel. */
+        showZoomControl: true,
 
-        /* 	If true, the page control toolbar is locked to the bottom bar and expands to the page width.
-        End users can still dock/undock via the dock button on the page control toolbar. */
-        dockPageControls: true,
-
-        /* Allowed possible values are 'FIT_PAGE', 'FIT_WIDTH' or ''.
-        FIT_WIDTH expands the page horizontally to the full width of the document pane; with this setting,
-        the full page is unlikely to display on a single screen. Scrolling may be required.
-        FIT_PAGE displays the entire page in the current view pane so that no scrolling is required.
-        Note that end users can toggle the mode via the Fit Width button on the page controls bar (if present). */
+        /* Allowed possible values are 'FIT_PAGE', 'FIT_WIDTH', 'TWO_COLUMN', 'TWO_COLUMN_FIT_PAGE', or ''.
+        FIT_WIDTH expands the page horizontally to the full width of the document pane.
+        FIT_PAGE displays the entire page in the current view so that no scrolling is required.
+        TWO_COLUMN displays two pages side-by-side in the current view.
+        TWO_COLUMN_FIT_PAGE displays two pages side-by-side where the pages are zoomed to page level.
+        Note that end users can toggle the view mode on the right hand panel. */
         defaultViewMode: ''
     };
 

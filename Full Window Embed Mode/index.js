@@ -11,7 +11,7 @@ written permission of Adobe.
 
 /* Control the default view mode */
 const viewerConfig = {
-    /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH" or "" */
+    /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH", "TWO_COLUMN", "TWO_COLUMN_FIT_PAGE" or "". */
     defaultViewMode: "",
 };
 

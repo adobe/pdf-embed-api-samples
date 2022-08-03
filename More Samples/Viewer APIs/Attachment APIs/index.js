@@ -9,11 +9,6 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-var viewerConfig = {
-    /* Disable the left-hand panel */
-    showLeftHandPanel: false,  /* Default value is true */
-};
-
 /* Variable for holding reference of viewer API */
 var viewerApis;
 
@@ -39,7 +34,7 @@ function previewFile(filePromise, fileName) {
             /* file name */
             fileName: fileName
         }
-    }, viewerConfig);
+    }, {});
 
 
     /* Use the getAPIs() interface to invoke the viewer APIs */
@@ -51,7 +46,7 @@ function previewFile(filePromise, fileName) {
         });
     });
 }
-    
+
 /* Helper function to check if selected file is PDF or not. */
 function isValidPDF(file) {
     if (file.type === "application/pdf") {
@@ -127,7 +122,7 @@ var createAttachmentList = function (attachmentList, attachmentItem) {
 /* Download the attachment from the PDF. */
 var getAttachmentBuffer = function (attachmentName, mimeType) {
     viewerApis.getAttachmentAPIs().getAttachmentBuffer(attachmentName)
-        .then(function (res) { 
+        .then(function (res) {
             var blob=new Blob([res.buffer], {type: mimeType});
                 var link=document.createElement("a");
                 link.href=window.URL.createObjectURL(blob);

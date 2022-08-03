@@ -268,13 +268,15 @@ var selectAnnotationTool = function(annotTool) {
     if (annotTool !== "eraser") {
         document.getElementById("annot-color").style.display = "inline-block";
     }
+
     if (annotTool === "freetext") {
         document.getElementById("font-size").style.display = "inline-block";
     }
     if (annotTool === "shape") {
         document.getElementById("stroke-width").style.display = "inline-block";
+        document.getElementById("eraser").style.display = "inline-block";
     }
-
+    
     if (selectedAnnotationTool !== annotTool) {
         selectedAnnotationTool = annotTool;
         startAnnotationMode(annotTool, {});
@@ -284,6 +286,7 @@ var selectAnnotationTool = function(annotTool) {
         document.getElementById("annot-color").style.display = "none";
         document.getElementById("font-size").style.display = "none";
         document.getElementById("stroke-width").style.display = "none";
+        document.getElementById("eraser").style.display = "none";
     }
 }
 
@@ -310,8 +313,23 @@ var startAnnotationMode = function(mode, options) {
 }
 
 /* End the annotation mode */
-var endAnnotationMode = function(mode, options) {
+var endAnnotationMode = function() {
     annotationManager.endAnnotationMode()
         .then(function () {})
         .catch(function(error) { console.log(error)});
+}
+
+/* Start the eraser annotation mode */
+var selectEraserTool = function() {
+    if(document.getElementById("eraser").style.opacity !== "1") {
+        document.getElementById("eraser").style.opacity = "1.0";
+        annotationManager.startAnnotationMode("eraser")
+            .then(function () {})
+            .catch(function(error) { console.log(error)});
+    } else {
+        document.getElementById("eraser").style.opacity = "0.5";
+        annotationManager.endAnnotationMode()
+            .then(function () {})
+            .catch(function(error) { console.log(error)});
+    }
 }
