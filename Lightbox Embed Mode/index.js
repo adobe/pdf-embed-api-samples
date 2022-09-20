@@ -34,7 +34,7 @@ function previewFile()
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+                url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [

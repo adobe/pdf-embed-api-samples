@@ -44,5 +44,8 @@
       }
     }
   },
-  "defaultProject": "adobe-dc-view-sdk-angular-sample"
+  "defaultProject": "adobe-dc-view-sdk-angular-sample",
+  "cli": {
+    "analytics": false
+  }
 }

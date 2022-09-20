@@ -15,7 +15,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class ViewSDKClient {
-    readyPromise: Promise<any> = new Promise((resolve) => {
+    readyPromise: Promise<any> = new Promise<void>((resolve) => {
         if (window.AdobeDC) {
             resolve();
         } else {
@@ -49,7 +49,7 @@ export class ViewSDKClient {
             content: {
                 /* Location of file where it is hosted */
                 location: {
-                    url: 'https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf',
+                    url: 'https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf',
                     /*
                     If the file URL requires some additional headers, then it can be passed as follows:-
                     headers: [
