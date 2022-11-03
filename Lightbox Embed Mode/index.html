@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Adobe Document Services PDF Embed API Sample</title>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
-    <script type="text/javascript" src="index.js"></script>
-</head>
-<!-- Customize page layout style according to your need and PDF file for best viewing experience -->
-<body style="margin: 0px; background-color: #fdfdf9;">
-<button type="button" id="view-pdf-btn" onclick="previewFile()" style="cursor: pointer; width: 120px; padding: 10px; font-family: 'Arial'; font-size: 15px; color: #ededed; border-radius: 5px; border: 1px #404040; background-color:#1473e6; margin: 100px 0 0 80px;" disabled>View PDF</button>
-    <script type="text/javascript" src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
-</body>
-</html>
+<script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+		var adobeDCView = new AdobeDC.View({clientId: "77e3a850393647e49dc9378cfae42bd8"});
+		adobeDCView.previewFile({
+			content:{promise: "<FILE_BLOB_PROMISE>"},
+			metaData:{fileName: "Account Setup Help.pdf"}
+		}, {embedMode: "LIGHT_BOX"});
+	});
+</script>
