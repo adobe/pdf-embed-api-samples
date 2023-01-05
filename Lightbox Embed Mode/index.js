@@ -14,7 +14,7 @@ const viewerConfig = {
     embedMode: "LIGHT_BOX"
 };
 
-/* Wait for Adobe Document Services PDF Embed API to be ready and enable the View PDF button */
+/* Wait for Adobe Acrobat Services PDF Embed API to be ready and enable the View PDF button */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     document.getElementById("view-pdf-btn").disabled = false;
 });

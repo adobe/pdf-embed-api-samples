@@ -15,7 +15,7 @@ const viewerConfig = {
     defaultViewMode: "",
 };
 
-/* Wait for Adobe Document Services PDF Embed API to be ready */
+/* Wait for Adobe Acrobat Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const pdf = urlParams.get('pdf');

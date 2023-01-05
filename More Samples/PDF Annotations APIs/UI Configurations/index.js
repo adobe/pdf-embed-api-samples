@@ -31,7 +31,7 @@ var annotationOptions = {
     eraser: {} 
 };
 
-/* Wait for Adobe Document Services PDF Embed API to be ready */
+/* Wait for Adobe Acrobat Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({

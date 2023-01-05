@@ -20,7 +20,7 @@ function onClick(pdf, embedMode) {
         showFile(pdf, embedMode);
     }
 
-    /* Wait for Adobe Document Services PDF Embed API to be ready. */
+    /* Wait for Adobe Acrobat Services PDF Embed API to be ready. */
     document.addEventListener("adobe_dc_view_sdk.ready", function () {
         showFile(pdf, embedMode); 
     });

@@ -1,6 +1,6 @@
-# Getting started with the Adobe Document Services PDF Embed API
+# Getting started with the Adobe Acrobat Services PDF Embed API
 
-The Adobe Document Services PDF Embed API lets you display PDF files in your website and leverage its power to benefit your users.
+The Adobe Acrobat Services PDF Embed API lets you display PDF files in your website and leverage its power to benefit your users.
 
 ## Prerequisites
 
