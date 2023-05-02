@@ -25,7 +25,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 headers: [
@@ -47,7 +47,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Handler to store the user preferences */
     var setUserSettingHandler = function (setting) {
         return new Promise(function (resolve, reject) {
-            /* This is an example code, where the user preferences are saved in the local storage of the website domain. 
+            /* This is an example code, where the user preferences are saved in the local storage of the website domain.
             Replace this with your own custom implementation of saving the preferences. */
             console.log("Setting user preferences in local storage of website domain.")
             localStorage.setItem("USER_SETTINGS", JSON.stringify(setting));
@@ -67,7 +67,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Handler to fetch the user preferences */
     var getUserSettingHandler = function () {
         return new Promise(function (resolve, reject) {
-            /* This is an example code to fetch the user preferences. Replace with your own custom implementation. */ 
+            /* This is an example code to fetch the user preferences. Replace with your own custom implementation. */
             console.log("Fetching user preferences from local storage of website domain.")
             var userSettings = localStorage.getItem("USER_SETTINGS") || "{}";
             userSettings = JSON.parse(userSettings);

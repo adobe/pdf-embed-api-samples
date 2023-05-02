@@ -12,7 +12,7 @@ written permission of Adobe.
 /* Function to render the file using PDF Embed API on clicking the PDF link. */
 function onClick(pdf, embedMode) {
     document.getElementById('adobe-dc-view').setAttribute('style', 'border: 1px solid lightgrey; width: 70vw; height: 50vw; margin: 0 auto;');
-  
+
     if (window.AdobeDC && window.AdobeDC.View) {
         showFile(pdf, embedMode);
     }
@@ -42,7 +42,7 @@ function showFile(pdf, embedMode) {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/" + pdf,
+                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/" + pdf,
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [

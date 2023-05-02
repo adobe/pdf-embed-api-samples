@@ -17,9 +17,9 @@ function onClick(pdf, embedMode) {
 
     /* Wait for Adobe Acrobat Services PDF Embed API to be ready. */
     document.addEventListener("adobe_dc_view_sdk.ready", function () {
-        showFile(pdf, embedMode); 
+        showFile(pdf, embedMode);
     });
-    
+
     return false;
 };
 
@@ -41,7 +41,7 @@ function showFile(pdf, embedMode) {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/" + pdf,
+                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/" + pdf,
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [
