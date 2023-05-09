@@ -49,7 +49,7 @@ export class ViewSDKClient {
             content: {
                 /* Location of file where it is hosted */
                 location: {
-                    url: 'https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf',
+                    url: 'https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf',
                     /*
                     If the file URL requires some additional headers, then it can be passed as follows:-
                     headers: [

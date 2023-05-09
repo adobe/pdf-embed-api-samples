@@ -46,7 +46,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [
@@ -67,7 +67,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
     /* Use the getAPIs() interface to invoke the viewer APIs */
     previewFilePromise.then(function (adobeViewer) {
-        
+
         /* Enable the custom search and zoom buttons after PDF is rendered */
         document.querySelectorAll(".zoom-btn").forEach(function(btn){
             btn.disabled = false;
@@ -77,7 +77,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
         adobeViewer.getAPIs().then(function (apis) {
             /* API to search for a keyword in the PDF. The first search result is highlighted in the PDF. */
-            viewerApis = apis; 
+            viewerApis = apis;
 
             /* Get current page zoom level and display in the UI  */
             getCurrentPageZoom();
@@ -107,7 +107,7 @@ var search = function(searchTerm) {
                 .then(function(result) {
                     console.log("Registered callback function with onResultsUpdate(): ", result)
                 })
-                .catch(function(error) { 
+                .catch(function(error) {
                     console.log(error)
                 });
         })

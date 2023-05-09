@@ -24,11 +24,11 @@ var selectedAnnotationTool;
 var annotationOptions = {
     freetext: { defaultColor: "#000000", fontSize: "12px"},
     note: { defaultColor: "#fccb00"},
-    highlight: { defaultColor: "#fccb00"}, 
-    strikeout: { defaultColor: "#b80000"}, 
+    highlight: { defaultColor: "#fccb00"},
+    strikeout: { defaultColor: "#b80000"},
     underline: { defaultColor: "#008b02"},
-    shape: { defaultColor: "#b80000", strokeWidth: 3}, 
-    eraser: {} 
+    shape: { defaultColor: "#b80000", strokeWidth: 3},
+    eraser: {}
 };
 
 /* Wait for Adobe Acrobat Services PDF Embed API to be ready */
@@ -40,14 +40,14 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
     });
-    
+
     /* Invoke the file preview API on Adobe DC View object and return the Promise object */
     var previewFilePromise = adobeDCView.previewFile({
         /* Pass information on how to access the file */
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [
@@ -70,12 +70,12 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
     /* Use the annotation manager interface to invoke the commenting APIs*/
     previewFilePromise.then(function (adobeViewer) {
-        
+
         /* Enable the annotation tools in the comments pane after PDF is rendered */
         Object.keys(annotationOptions).forEach(function(annotType) {
             document.getElementById(annotType).disabled = false;
         });
-        
+
         adobeViewer.getAnnotationManager().then(function (annotManager) {
             annotationManager = annotManager;
             /* API to set UI configurations */
@@ -260,11 +260,11 @@ var selectAnnotationTool = function(annotTool) {
     document.getElementById("annot-color").value = annotationOptions[annotTool].defaultColor;
     document.getElementById("font-size").value = annotationOptions[annotTool].fontSize;
     document.getElementById("stroke-width").value = annotationOptions[annotTool].strokeWidth;
-    
+
     document.getElementById("annot-color").style.display = "none";
     document.getElementById("font-size").style.display = "none";
     document.getElementById("stroke-width").style.display = "none";
-    
+
     if (annotTool !== "eraser") {
         document.getElementById("annot-color").style.display = "inline-block";
     }
@@ -276,7 +276,7 @@ var selectAnnotationTool = function(annotTool) {
         document.getElementById("stroke-width").style.display = "inline-block";
         document.getElementById("eraser").style.display = "inline-block";
     }
-    
+
     if (selectedAnnotationTool !== annotTool) {
         selectedAnnotationTool = annotTool;
         startAnnotationMode(annotTool, {});
