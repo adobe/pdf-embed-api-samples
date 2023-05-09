@@ -104,6 +104,10 @@ To see it in action, copy ```More Samples/Angular Samples``` folder to your comp
 
 For detailed documentation, please check https://www.adobe.com/go/dcviewsdk_docs.
 
+## Other Options
+
+Adobe also offers PDF-related APIs for the manipulation and creation of PDFs. See our [PDF Services](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) for more information. Along with general purpose PDF manipulation services, you can use [Adobe Document Generation](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) to dynamically generate PDFs from Microsoft Word templates and your custom data. 
+
 ## Licensing
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE.md) for more information.
